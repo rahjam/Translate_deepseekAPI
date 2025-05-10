@@ -70,13 +70,15 @@ The application provides a user-friendly web interface where users can input tex
 ## File Structure
 Translate_deepseekAPI/
 .
- * [templates](./templates)
-   * [index.html](./templates/index.html)
- * [app.py](./app.py)
- * [__pycache__](./__pycache__)
-   * [app.cpython-312.pyc](./__pycache__/app.cpython-312.pyc)
- * [README.md](./README.md)
- * [requirements.txt](./requirements.txt)
+├── app.py
+├── __pycache__
+│   └── app.cpython-312.pyc
+├── README.md
+├── requirements.txt
+├── templates
+│   └── index.html
+└── tree-md
+
 
 
 
