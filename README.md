@@ -16,7 +16,7 @@ The application provides a user-friendly web interface where users can input tex
 
 ## Requirements
 
-* Python 3.12+
+* Python 3.12
 * Flask = 3.0.0
 * Requests library = 2.31.0
 * python-dotenv (optional, but recommended for managing environment variables)
@@ -75,6 +75,7 @@ Translate_deepseekAPI/
 │   └── index.html
 ├── README.md
 └── requirements.txt
+
 
 * `app.py`: Contains the Flask application logic, including the route handler and the translation function that interacts with the OpenRouter API.
 * `index.html`: The HTML template for the web interface, including the form for input and the display area for the output.
