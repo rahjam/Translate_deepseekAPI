@@ -1,0 +1,142 @@
+<!-- 
+/*!
+ * @file        index.html
+ * @brief       Web interface for text input and translation result display
+ * @author      Rahim Jamali <rahim.jamali@gmail.com>
+ * @copyright   © 2025 Rahim Jamali
+ * @license     as-is License
+ * @date        2025-04-05
+ * @version     1.0.0
+ */
+
+/*!
+ * File: index.html
+ * Description: A responsive Persian/RTL translation interface for a Flask web application.
+ * Purpose: Displays a form to input text and shows translated output from the server.
+ * Template Engine: Jinja2 (used with Flask)
+ * Language: HTML + Jinja2 template syntax
+ * Direction: RTL (Right-To-Left) - Persian (fa)
+ * Charset: UTF-8
+ *
+ * Variables:
+ *   - input_text (str): Original text entered by user. Populates textarea after POST request.
+ *   - output_text (str): Translated text returned from the server, shown conditionally.
+ *
+ * Features:
+ *   - Mobile-responsive design
+ *   - Clean UI for text input and result display
+ *   - Styled using plain CSS (no external frameworks)
+ *   - Proper handling of RTL layout for Persian language
+ */
+-->
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مترجم متن فارسی آنلاین</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 150px;
+            font-size: 16px;
+            direction: rtl;
+            text-align: right;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .result-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            direction: rtl;
+            text-align: right;
+            white-space: pre-wrap;
+            line-height: 2;
+            border: 1px solid #eee;
+        }
+
+        .result-box strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>مترجم متن فارسی آنلاین</h1>
+        
+        <form method="POST">
+            <label for="input_text">متن ورودی:</label>
+            <textarea 
+                id="input_text" 
+                name="input_text" 
+                rows="6"
+                placeholder="متن مورد نظر برای ترجمه را وارد کنید..."
+            >{{ input_text }}</textarea>
+            
+            <button type="submit">ترجمه کن</button>
+        </form>
+
+        {% if output_text %}
+        <div class="result-box">
+            <strong>نتیجه ترجمه:</strong>
+            <div>{{ output_text }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
