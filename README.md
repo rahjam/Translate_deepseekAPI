@@ -70,11 +70,11 @@ The application provides a user-friendly web interface where users can input tex
 ## File Structure
 Translate_deepseekAPI/
 │
-├── app.py                  # Main Flask application
+├── app.py
 ├── templates/
-│   └── index.html          # HTML template for translation interface
-├── README.md               # This file
-└── requirements.txt        # Python dependencies
+│   └── index.html
+├── README.md
+└── requirements.txt
 
 * `app.py`: Contains the Flask application logic, including the route handler and the translation function that interacts with the OpenRouter API.
 * `index.html`: The HTML template for the web interface, including the form for input and the display area for the output.
