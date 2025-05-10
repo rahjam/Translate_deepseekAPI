@@ -69,12 +69,15 @@ The application provides a user-friendly web interface where users can input tex
 
 ## File Structure
 Translate_deepseekAPI/
-│
-├── app.py
-├── templates/
-│   └── index.html
-├── README.md
-└── requirements.txt
+.
+ * [templates](./templates)
+   * [index.html](./templates/index.html)
+ * [app.py](./app.py)
+ * [__pycache__](./__pycache__)
+   * [app.cpython-312.pyc](./__pycache__/app.cpython-312.pyc)
+ * [README.md](./README.md)
+ * [requirements.txt](./requirements.txt)
+
 
 
 * `app.py`: Contains the Flask application logic, including the route handler and the translation function that interacts with the OpenRouter API.
