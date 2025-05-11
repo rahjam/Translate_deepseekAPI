@@ -68,6 +68,7 @@ The application provides a user-friendly web interface where users can input tex
     Enter the text you want to translate into the input box and click the "ترجمه کن" (Translate) button. The Persian translation will appear below.
 
 ## File Structure
+```bash
 Translate_deepseekAPI/
 │
 ├── app.py                  # Main Flask application
@@ -75,6 +76,7 @@ Translate_deepseekAPI/
 │   └── index.html          # HTML template for translation interface
 ├── README.md               # This file
 └── requirements.txt        # Python dependencies
+```
 
 
 * `app.py`: Contains the Flask application logic, including the route handler and the translation function that interacts with the OpenRouter API.
