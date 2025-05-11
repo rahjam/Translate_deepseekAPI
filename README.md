@@ -1,6 +1,12 @@
+
 # Online Persian Text Translator
 
 This is a simple Flask web application that translates text from any language into Persian using the DeepSeek Chat API via OpenRouter.
+
+<div style="text-align: center;">
+    <img width="40%" src="images/translate_page.png">
+</div>
+
 
 ## Overview
 
@@ -69,13 +75,16 @@ The application provides a user-friendly web interface where users can input tex
 
 ## File Structure
 ```bash
-Translate_deepseekAPI/
-│
+Translate_deepseekAPI/       
 ├── app.py                  # Main Flask application
-├── templates/
-│   └── index.html          # HTML template for translation interface
+├── images
+│   └── translate_page.png  
+├── __pycache__
+│   └── app.cpython-312.pyc
 ├── README.md               # This file
-└── requirements.txt        # Python dependencies
+├── requirements.txt        # Python dependencies
+└── templates
+    └── index.html          # HTML template for translation interface
 ```
 
 

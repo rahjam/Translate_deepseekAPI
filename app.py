@@ -107,4 +107,6 @@ def index():
 
 
 if __name__ == "__main__":
+    print(API_URL)
+    print(API_KEY)
     app.run(debug=True)
