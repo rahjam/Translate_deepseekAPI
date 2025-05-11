@@ -76,6 +76,7 @@ Translate_deepseekAPI/
 ├── README.md               # This file
 └── requirements.txt        # Python dependencies
 
+
 * `app.py`: Contains the Flask application logic, including the route handler and the translation function that interacts with the OpenRouter API.
 * `index.html`: The HTML template for the web interface, including the form for input and the display area for the output.
 * `.env`: (Optional) File to store the `DEEPSEEK_API_KEY` environment variable.
